@@ -1,0 +1,308 @@
+
+.btn-login {
+  padding: 8px 16px;
+  background-color: #d2691e;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+  background-color: #a0522d;
+}
+.login-card {
+  /* background-color: #e88f8f; */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  border-radius: 16px;
+  padding: 24px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 16px;
+  color: rgb(253, 250, 250);
+}
+
+.error-message {
+  color: #dc2626;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.success-message {
+  color: #16a34a;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.login-input {
+  width: 90%;
+  padding: 15px;
+  margin-bottom: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+.login-button {
+  width: 100%;
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition: background-color 0.3s;
+}
+
+.login-button-blue {
+  background-color: #3b82f6;
+}
+
+.login-button-blue:hover {
+  background-color: #2563eb;
+}
+
+.login-button-green {
+  background-color: #22c55e;
+}
+
+.login-button-green:hover {
+  background-color: #16a34a;
+}
+
+.login-button-red {
+  background-color: #ef4444;
+}
+
+.login-button-red:hover {
+  background-color: #dc2626;
+}
+
+.login-divider {
+  text-align: center;
+  color: #e8eaef;
+  margin: 12px 0;
+}
+
+
+
+
+/* Logo Image */
+.logo-image {
+  height: 50px; 
+  border-radius: 50%; 
+  
+}
+
+/* Hover Effect for Login Link */
+/* .login-link:hover {
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+} */
+
+.title{
+  margin-right: 1000px;
+  color: white;
+}
+
+
+/* MainPage.css */
+
+/* General Layout */
+.main-container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Location Section */
+.location-section {
+  padding: 2rem;
+}
+
+.location-section h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.location-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.location-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.location-card:hover {
+  transform: translateY(-10px);
+}
+
+.location-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.location-card h2 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.location-card p {
+  color: #555;
+  padding: 0 1rem;
+  font-size: 1rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.book-button, .fav-button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.book-button {
+  background-color: #007BFF;
+  color: white;
+}
+
+.book-button:hover {
+  background-color: #0056b3;
+}
+
+.fav-button {
+  background-color: #FF5733;
+  color: white;
+}
+
+.fav-button:hover {
+  background-color: #C70039;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  font-size: 32px;
+  cursor: pointer;
+  display: block;
+ position: absolute;
+ top: 20px;
+ right: 35px;
+}
+
+.menu {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #0d4755;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  z-index: 10;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+  background-color: #5a0e27;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  flex-shrink: 0;
+}
+
+/* Slide Navigation Icons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover, .next:hover {
+   background: rgba(0, 0, 0, 0.8); 
+} 
