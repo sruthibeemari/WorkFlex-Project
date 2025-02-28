@@ -10,13 +10,20 @@ const MainPage = () => {
     const images = [
         "/workspace1.jpg",
         "/workspace2.webp",
-        "/workspace3.webp"
+        "/workspace3.jpg"
     ];
+    const workspaces = [
+        { id: 1, image: "/cardws1.jpg", name: "Cozy Café", description: "Perfect for remote work with great coffee." },
+        { id: 2, image: "/images/workspace2.jpg", name: "Modern Office", description: "Spacious and well-equipped for teams." },
+        { id: 3, image: "/images/workspace3.jpg", name: "Library Nook", description: "Quiet and peaceful workspace for deep focus." },
+        { id: 4, image: "/images/workspace4.jpg", name: "Outdoor Patio", description: "Work with a fresh breeze and great views." }
+    ];
+    
 
     useEffect(() => {
         const interval = setInterval(() => {
             nextSlide();
-        }, 10000); // Auto-slide every 3 seconds
+        }, 3000); // Auto-slide every 3 seconds
 
         return () => clearInterval(interval);
     }, [currentIndex]);
@@ -57,7 +64,7 @@ const MainPage = () => {
             </div>
 
             {/* Location Cards */}
-            <div className="location-section">
+            {/* <div className="location-section">
                 <h1>Explore Workspaces</h1>
                 <div className="location-cards">
                     {[1, 2, 3, 4].map((index) => (
@@ -72,7 +79,23 @@ const MainPage = () => {
                         </div>
                     ))}
                 </div>
+            </div> */}
+            <div className="location-section">
+    <h1>Explore Workspaces</h1>
+    <div className="location-cards">
+        {workspaces.map((workspace) => (
+            <div key={workspace.id} className="location-card">
+                <img src={workspace.image} alt={workspace.name} />
+                <h2>{workspace.name}</h2>
+                <p>{workspace.description}</p>
+                <div className="buttons">
+                    <button className="book-button">Book Now</button>
+                    <button className="fav-button">Add to Favourites</button>
+                </div>
             </div>
+        ))}
+    </div>
+</div>
 
             {/* Footer */}
             <footer className="footer">
