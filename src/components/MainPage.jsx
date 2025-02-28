@@ -57,7 +57,7 @@ const MainPage = () => {
             </div>
 
             {/* Location Cards */}
-            {/* <div className="location-section">
+            <div className="location-section">
                 <h1>Explore Workspaces</h1>
                 <div className="location-cards">
                     {[1, 2, 3, 4].map((index) => (
@@ -72,7 +72,7 @@ const MainPage = () => {
                         </div>
                     ))}
                 </div>
-            </div> */}
+            </div>
 
             {/* Footer */}
             <footer className="footer">

@@ -31,7 +31,7 @@ const Hero = () => {
 
 const styles = {
     hero: {
-        backgroundImage: 'url(../public/logo3.jpg)',
+        backgroundImage: 'url(/logo3.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
