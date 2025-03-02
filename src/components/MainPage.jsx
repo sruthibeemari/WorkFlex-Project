@@ -2,16 +2,20 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react'; // Import icons
 import '../App.css';
+import WorkspaceModal from './WorkspaceModal'; // Importing modal component
 
 const MainPage = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [selectedWorkspace, setSelectedWorkspace] = useState(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
     
     const images = [
         "/workspace1.jpg",
         "/workspace2.webp",
         "/workspace3.jpg"
     ];
+    
     const workspaces = [
         { id: 1, image: "/cardws1.jpg", name: "Cozy Café", description: "Perfect for remote work with great coffee." },
         { id: 2, image: "/images/workspace2.jpg", name: "Modern Office", description: "Spacious and well-equipped for teams." },
@@ -19,7 +23,6 @@ const MainPage = () => {
         { id: 4, image: "/images/workspace4.jpg", name: "Outdoor Patio", description: "Work with a fresh breeze and great views." }
     ];
     
-
     useEffect(() => {
         const interval = setInterval(() => {
             nextSlide();
@@ -34,6 +37,16 @@ const MainPage = () => {
 
     const prevSlide = () => {
         setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
+    };
+
+    const openModal = (workspace) => {
+        setSelectedWorkspace(workspace);
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+        setSelectedWorkspace(null);
     };
 
     return (
@@ -58,44 +71,30 @@ const MainPage = () => {
                         <img key={index} src={src} alt={`Workspace ${index + 1}`} />
                     ))}
                 </div>
-                {/* Left & Right Slide Icons */}
                 <button className="prev" onClick={prevSlide}><ChevronLeft size={32} /></button>
                 <button className="next" onClick={nextSlide}><ChevronRight size={32} /></button>
             </div>
 
             {/* Location Cards */}
-            {/* <div className="location-section">
+            <div className="location-section">
                 <h1>Explore Workspaces</h1>
                 <div className="location-cards">
-                    {[1, 2, 3, 4].map((index) => (
-                        <div key={index} className="location-card">
-                            <img src={`/images/workspace${index}.jpg`} alt={`Workspace ${index}`} />
-                            <h2>Workspace {index}</h2>
-                            <p>Cozy and comfortable workspace with all amenities.</p>
+                    {workspaces.map((workspace) => (
+                        <div key={workspace.id} className="location-card">
+                            <img src={workspace.image} alt={workspace.name} />
+                            <h2>{workspace.name}</h2>
+                            <p>{workspace.description}</p>
                             <div className="buttons">
-                                <button className="book-button">Book Now</button>
+                                <button className="book-button" onClick={() => openModal(workspace)}>View details</button>
                                 <button className="fav-button">Add to Favourites</button>
                             </div>
                         </div>
                     ))}
                 </div>
-            </div> */}
-            <div className="location-section">
-    <h1>Explore Workspaces</h1>
-    <div className="location-cards">
-        {workspaces.map((workspace) => (
-            <div key={workspace.id} className="location-card">
-                <img src={workspace.image} alt={workspace.name} />
-                <h2>{workspace.name}</h2>
-                <p>{workspace.description}</p>
-                <div className="buttons">
-                    <button className="book-button">Book Now</button>
-                    <button className="fav-button">Add to Favourites</button>
-                </div>
             </div>
-        ))}
-    </div>
-</div>
+
+            {/* Workspace Modal */}
+            <WorkspaceModal isOpen={isModalOpen} workspace={selectedWorkspace} onClose={closeModal} />
 
             {/* Footer */}
             <footer className="footer">
@@ -106,3 +105,4 @@ const MainPage = () => {
 };
 
 export default MainPage;
+
