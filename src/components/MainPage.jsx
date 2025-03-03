@@ -17,10 +17,34 @@ const MainPage = () => {
     ];
     
     const workspaces = [
-        { id: 1, image: "/cardws1.jpg", name: "Cozy Café", description: "Perfect for remote work with great coffee." },
-        { id: 2, image: "/images/workspace2.jpg", name: "Modern Office", description: "Spacious and well-equipped for teams." },
-        { id: 3, image: "/images/workspace3.jpg", name: "Library Nook", description: "Quiet and peaceful workspace for deep focus." },
-        { id: 4, image: "/images/workspace4.jpg", name: "Outdoor Patio", description: "Work with a fresh breeze and great views." }
+        { 
+            id: 1, 
+            image: "/cardws1.jpg", // Image for Main Page
+            modalImages: ["/cardws1.jpg", "/cardsws11.jpg"], // Images for Modal
+            name: "Cozy Café", 
+            description: "Perfect for remote work with great coffee." 
+        },
+        { 
+            id: 2, 
+            image: "/cardws2.jpg",
+            modalImages: ["/cardws2.jpg", "/cardsws21.jpg"], 
+            name: "Modern Office", 
+            description: "Spacious and well-equipped for teams." 
+        },
+        { 
+            id: 3, 
+            image: "/cardws3.jpg",
+            modalImages: ["/cardws3.jpg", "/cardsws31.jpg"], 
+            name: "Library Nook", 
+            description: "Quiet and peaceful workspace for deep focus." 
+        },
+        { 
+            id: 4, 
+            image: "/cardws4.jpg",
+            modalImages: ["/cardws4.jpg", "/cardsws41.jpg"], 
+            name: "Outdoor Patio", 
+            description: "Work with a fresh breeze and great views." 
+        }
     ];
     
     useEffect(() => {

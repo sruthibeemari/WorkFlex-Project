@@ -6,6 +6,7 @@ import Hero from './components/Hero';
 import Features from './components/Features';
 import Loginpage from './components/Loginpage';
 import MainPage from './components/MainPage';
+import BookingPage from './components/Bookingpage';
 
 function App() {
     return (
@@ -37,7 +38,15 @@ function AppContent() {
                 {/* Login Route */}
                 <Route path="/login" element={<Loginpage />} />
                 <Route path="/main" element={<MainPage />} />
+                
+                 <Route path="/" element={<MainPage />} />
+                 <Route path="/booking/:id" element={<BookingPage />} />
+      
+   
+  
+
             </Routes>
+            
         </div>
         
     );
